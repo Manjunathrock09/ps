@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //C pattern
+num=5
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=num;j++){
+        if(i==1||i==num||j==1){
+            s=s+"*"+" "
+        }
+        else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+}
+//U pattern
+num=5
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=num;j++){
+        if(i==5||i==num||j==1||j==num){
+            s=s+"*"+" "
+        }
+        else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+}
+//T Pattern
+num=5
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=num;j++){
+        if(i==1||j==Math.ceil(num/2)){
+            s=s+"*"+" "
+        }
+        else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+} 
+//S Pattern
+num = 5
+mid = Math.ceil(num / 2)
+for (let i = 1; i <= num; i++) {
+    let s = "";
+    for (let j = 1; j <= num; j++) {
+        if (i === 1 || i === num || (i === mid) || (i < mid && j === 1) || (i > mid && j === num)) {
+            s += "* "
+        } else {
+            s += "  "
+        }
+    }
+    console.log(s);
+}
+</script>
+</body>
+</html>

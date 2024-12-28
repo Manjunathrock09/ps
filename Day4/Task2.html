@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var number = parseInt(prompt('Enter a number:'));
+var previousPrime = number - 1;
+
+while (previousPrime >= 2) {
+    var isPrime = true;
+    if (previousPrime < 2) isPrime = false;
+    for (var j = 2; j <= Math.sqrt(previousPrime); j++) {
+        if (previousPrime % j === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime) {
+        console.log('Previous prime:', previousPrime);
+        break;
+    }
+    previousPrime--;
+}
+
+if (previousPrime < 2) {
+    console.log('No previous prime found.');
+}
+    </script>
+</body>
+</html>

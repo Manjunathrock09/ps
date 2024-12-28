@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Task1
+var number = 121;
+var strNum = number.toString();
+var isPalindrome = strNum === strNum.split('').reverse().join('');
+console.log(number + " is a palindrome: " + isPalindrome);
+//Task2
+var startIndex = 0;
+var count = 10;
+var fibSeries = [];
+var a = 0, b = 1;
+while (fibSeries.length < count) {
+    if (fibSeries.length >= startIndex) {
+        fibSeries.push(a);
+    }
+    var temp = a;
+    a = b;
+    b = temp + b;
+}
+console.log("Fibonacci series starting from index " + startIndex + ": " + fibSeries);
+    </script>
+</body>
+</html>

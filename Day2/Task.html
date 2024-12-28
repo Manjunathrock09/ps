@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var monthIndex = prompt('Enter a month index (0 for January to 11 for December):');
+monthIndex = parseInt(monthIndex);
+var months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+if (monthIndex >= 0 && monthIndex <= 11) {
+    console.log('Month:', months[monthIndex]);
+} else {
+    console.log('Invalid month index. Please enter a number between 0 and 11.');
+}
+    </script>
+</body>
+</html>

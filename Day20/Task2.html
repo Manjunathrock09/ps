@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = 5; // You can change this value for a different size
+
+// Upper part of the diamond
+for (let i = 0; i < n; i++) {
+    let line = '';
+    
+    // Print leading spaces
+    for (let j = 0; j < n - i - 1; j++) {
+        line += ' ';
+    }
+    
+    // Print alphabets and spaces
+    for (let j = 0; j < 2 * i + 1; j++) {
+        if (j === 0 || j === 2 * i) {
+            line += String.fromCharCode(65 + i); // 65 is ASCII for 'A'
+        } else {
+            line += ' ';
+        }
+    }
+    
+    console.log(line);
+}
+
+// Lower part of the diamond
+for (let i = n - 2; i >= 0; i--) {
+    let line = '';
+    
+    // Print leading spaces
+    for (let j = 0; j < n - i - 1; j++) {
+        line += ' ';
+    }
+    
+    // Print alphabets and spaces
+    for (let j = 0; j < 2 * i + 1; j++) {
+        if (j === 0 || j === 2 * i) {
+            line += String.fromCharCode(65 + i); // 65 is ASCII for 'A'
+        } else {
+            line += ' ';
+        }
+    }
+    
+    console.log(line);
+}
+    </script>
+</body>
+</html>

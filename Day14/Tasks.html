@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task1
+const input1 = "JscrAViptA";
+let result1 = '';
+for (let i = 0; i < input1.length; i++) {
+    const char = input1[i];
+    if (char >= 'a' && char <= 'z') {
+        result1 += String.fromCharCode(char.charCodeAt(0) - 32);
+    } else if (char >= 'A' && char <= 'Z') {
+        result1 += String.fromCharCode(char.charCodeAt(0) + 32); 
+    } else {
+        result1 += char; 
+    }
+}
+console.log(result1); 
+//Task2
+const input2 = "  Hello World!   ";
+let trimmedEnd = '';
+let i = input2.length - 1;
+while (i >= 0 && input2[i] === ' ') {
+    i--;
+}
+for (let j = 0; j <= i; j++) {
+    trimmedEnd += input2[j];
+}
+console.log(trimmedEnd);
+//Task3
+const input3 = "JscrAViptA";
+let upperChars = '';
+let lowerChars = '';
+for (let i = 0; i < input3.length; i++) {
+    const char = input3[i];
+    if (char >= 'A' && char <= 'Z') {
+        upperChars += char; 
+    } else if (char >= 'a' && char <= 'z') {
+        lowerChars += char; 
+    }
+}
+const rearranged = upperChars + lowerChars;
+console.log(rearranged);  
+    </script>
+</body>
+</html>

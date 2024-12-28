@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var start = parseInt(prompt('Enter the start of the range:'));
+var end = parseInt(prompt('Enter the end of the range:'));
+var largestPrime = -1;
+
+for (var i = start; i <= end; i++) {
+    var isPrime = true;
+    if (i < 2) isPrime = false;
+    for (var j = 2; j <= Math.sqrt(i); j++) {
+        if (i % j === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime && i > largestPrime) {
+        largestPrime = i;
+    }
+}
+
+if (largestPrime !== -1) {
+    console.log('Largest prime in the range:', largestPrime);
+} else {
+    console.log('No prime numbers found in this range.');
+}
+    </script>
+</body>
+</html>

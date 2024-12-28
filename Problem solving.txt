@@ -1,0 +1,947 @@
+(*)
+let matrix=[[1,2,3,1,2],[4,5,6,4,5],[7,8,9,7,8],[1,2,3,4,5],[4,5,6,7,8]]
+mid_row=Math.floor(matrix.length/2)
+mid_col=Math.floor(matrix[mid_row].length/2)
+// console.log(matrix[mid_row][mid_col])
+for(i=0;i<matrix.length;i++){
+    for(j=0;j<matrix[i].length;j++){
+        if(i==mid_row&& j==mid_col){
+            continue
+        }
+        else{
+            console.log(matrix[i][j])
+        }
+    }
+}
+(*)let matrix=[[1,2,3,1,2],[4,5,6,4,5],[7,8,9,7,8],[1,2,3,4,5],[4,5,6,7,8]]
+mid_row=Math.floor(matrix.length/2)
+mid_col=Math.floor(matrix[mid_row].length/2)
+// console.log(matrix[mid_row][mid_col])
+sum=0
+for(i=0;i<matrix.length;i++){
+    for(j=0;j<matrix[i].length;j++){
+        if(i==mid_row&& j==mid_col){
+            continue
+        }
+        else{
+            console.log(matrix[i][j])
+            sum=sum+matrix[i][j]
+        }
+    }
+}
+console.log(sum)
+(*)let matrix=[[1,2,3],[4,5,6],[7,8,9]]
+for(i=0;i<matrix.length;i++){
+    for(j=0;j<matrix[i].length;j++){
+        if(i==j){
+            console.log(matrix[i][j]);
+        }
+    }
+}
+(*)let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let leftDiagonalProduct = 1;
+let rightDiagonalSum = 0;
+for (let i = 0; i < matrix.length; i++) {
+    const leftDiagonal = matrix[i][i];
+    const rightDiagonal = matrix[i][matrix.length - 1 - i];
+    leftDiagonalProduct *= leftDiagonal;
+    rightDiagonalSum += rightDiagonal;
+}
+console.log(leftDiagonalProduct);
+console.log( rightDiagonalSum);
+23-10-2024
+(*)
+str =" Bright Carrier"
+for ( i of str){//(vowels = a,e,i,o,u)
+    if(i=='a'||i=='e'||i=='i'||i=='o'||i=='u'){
+        console.log(i)//iaie
+    }
+}
+(*)
+let str = " Bright";
+let str2 = str.trim().split(" ");
+str2[0] = str2[0].toLowerCase(); 
+let result = str2.join(" "); 
+console.log(result); 
+(*)
+let str = "Bright";
+str = str.toLowerCase(); 
+count = 1;
+for (let i of str) {
+    if (i === 'a' || i === 'e' || i === 'i' || i === 'o' || i === 'u') {
+        count++;
+    }
+}
+console.log(count); 
+(*)
+str="this is a string@_123"
+str2=str.toUpperCase()
+for(i in str2){
+    console.log(str2.charCodeAt(i))
+}
+(*)
+str="Manjunath"
+for(i in str){
+    if(i%2!==0){
+        console.log(str[i].toUpperCase());
+}else{
+    console.log(str[i])
+}
+}
+(*)
+str="Manjunath"
+res=" "
+for(i in str){
+    if(i%2!==0){
+        res= res+str[i].toUpperCase()
+}else{
+    res+=str[i]
+}
+}
+console.log(res)
+(*)
+str="Manjunath"
+res=" "
+for(i in str){
+    if(i%2!==1){
+        res= res+str[i].toUpperCase()
+}else{
+    res+=str[i]
+}
+}
+console.log(res)
+(*)
+let char = "B"
+if (char === char.toUpperCase()) {
+    console.log("UpperCase");
+} else {
+    console.log("LowerCase");
+}
+24-10-24(*)
+let str = "programmme"
+vowels = "aeiou"
+vow = ""
+for(i in str){
+    if(i%2===0&& vowels.includes(str[i])){
+        vow+=str[i]
+    }
+}
+console.log(vow)
+(*)let str ="mam"
+rev = " "
+for(let i=str.length-1;i>=0;i--){
+  rev = rev+str[i]
+}
+console.log(rev)
+if(rev==" "+str){
+  console.log(rev.trim(),"It is Palindrome")
+}else{
+  console.log("not a Palindrome")
+}
+(*)
+let str ="mam"
+rev = " "
+for(let i=str.length-1;i>=0;i--){
+  rev = rev+str[i]
+}
+console.log(rev)
+if(rev==" "+str){
+  console.log(rev,"It is Palindrome")
+}else{
+  console.log("not a Palindrome")
+}
+(*)
+let str = "hello world"
+str2 = " "
+char = "o"
+count = 0
+for(i in str){
+  if(str[i]==="o"&&count==0){
+    str2=str2+char
+    count++
+  }else{
+    str2 = str2+str[i]
+  }
+}
+console.log(str2)
+(*)
+let str="JaVaScRipT"
+upper = " "
+lower = " "
+for(i of str){
+  if(i!==" "){
+    if(i==i.toUpperCase()){
+      upper+=i
+    }else{
+      lower+=i
+    }
+  }
+}
+console.log(upper)
+console.log(lower)
+28-10-2024
+(*)let arr=[108,75,88,1,2,3,3,5,7,9,10]
+max=arr[0]
+sec_max=arr[0]
+for(i of arr){
+    if(i>max){
+        sec_max=max
+        max=i
+    }
+}
+if(i<max&&i>sec_max){
+    sec_max=i
+}
+console.log(sec_max)
+//Output:108
+(*)
+//patterns
+rows = 5
+count = 1
+for(i=0;i<rows;i++){
+    s=" "
+    for(j=0;j<rows;j++){
+        s= s+"*"+" "
+        count++
+    }
+    console.log(s)
+}
+(*)
+num = 5
+// count = 1
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=num;j++){
+        s= s+j+ " "
+        // count++
+    }
+    console.log(s)
+}
+(*)
+num = 5
+count = 1
+for(i=1;i<=num;i++){
+    s=" "
+  for(j=1;j<=num; j++){
+      if(count<10){
+          s=s+"0"+count+ " "
+          count++
+      }else{
+          s=s+count+" "
+          count++
+      }
+  }
+  console.log(s)
+}
+(*)
+num = 5
+count = 1
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=num;j++){
+        if(i==j){
+            s=s+j+" "
+        }else{
+            s=s+"0"+" "
+        }
+    }
+    console.log(s)
+}
+(*)
+//patterns
+num = 5
+count = 1
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=i;j++){
+        s=s+j+" "
+    }
+    console.log(s)
+}
+//29-10-24
+num = 5
+for(i=1;i<=num;i++){
+    s=" "
+    code=97
+    for(j=1;j<=i;j++){
+        s=s+String.fromCharCode(code)+" "
+        code++
+    }
+    console.log(s)
+}
+
+//Task
+num = 5;
+for (i = 1; i <= num; i++) {
+     s = "";
+     code = 97;
+    for ( k = num; k > i; k--) {
+        s += " ";
+    }
+    
+    for ( j = 1; j <= i; j++) {
+        s += String.fromCharCode(code) + " ";
+        code++;
+    }
+    console.log(s);
+}
+(1)
+// rows=5
+// count=25
+// for(i=rows;i>0;i--){
+//     s="";
+//     for(j=rows;j>0;j--){
+//         if(count<10){
+//             s=s+"0"+count+' '
+//             count--
+//         }else{
+//             s=s+count+" "
+//             count--
+//         }
+//     }
+//     console.log(s)
+// }
+(2)
+// num = 15
+// count = 1;
+// for (let i = 1; count <= num; i++) { 
+//     let line = ''; 
+//     for (let j = 1; j <= i && count <=num; j++) {
+//         line += (count < 10 ? '0' : '') + count + ' ';  
+//         count++; 
+//     }
+//     console.log(line); 
+// }
+30-10-2024
+(*)
+   //C pattern
+    num=5
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=num;j++){
+        if(i==1||i==num||j==1){
+            s=s+"*"+" "
+        }
+        else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+}
+//U pattern
+num=5
+for(i=1;i<=num;i++){
+    s=" "
+    for(j=1;j<=num;j++){
+        if(i==5||i==num||j==1||j==num){
+            s=s+"*"+" "
+        }
+        else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+}
+01-11-2024
+//1)// num=5
+// for(i=1;i<=num;i++){
+//     s=" "
+//     for(j=1;j<=num;j++){
+//         if(i==1||j==Math.ceil(num/2)){
+//             s=s+"*"+" "
+//         }else{
+//             s=s+" "+" "
+//         }
+//     }
+//     console.log(s)
+// }
+
+//2)// let num = 5; 
+// for (let i = 1; i <= num; i++) {
+//     let s = ""; 
+//     for (let j = 1; j <= num; j++) {
+//         if (j === 1 || j === num || (i == j && i <= Math.ceil(num / 2)) || (i + j === num + 1 && i <= Math.ceil(num / 2))) {
+//             s += "* "; 
+//         } else {
+//             s += "  "; 
+//         }
+//     }
+//     console.log(s); 
+// }
+
+//3)/// let n = 5; 
+// for (let i = 1; i <= n; i++) { 
+// 	s = '';
+
+// 	for (let j = 1; j <= 2 * n; ++j) { 
+// 		if (i + j == n + 1 || (i == j - n + 1)) { 
+// 			s += '*';
+// 		} else {
+// 			s += ' ';
+// 		}
+// 	} 
+// 	console.log(s)
+// }
+// for (let i = n - 1; i >= 1; i--) { 
+// 	let s = '';
+// 	for (let j = 1; j <= 2 * n; ++j) { 
+// 		if (i + j == n + 1 || (i == j - n + 1)) { 
+// 			s += '*';
+// 		} else {
+// 			s += ' ';
+// 		}
+// 	} 
+// 	console.log(s); 
+// }
+//1)
+array = (a, b) => {
+arr = new Array(b); 
+for ( i = 0; i < b; i++) {
+    arr[i] = a * i + 1; 
+  }
+  return arr;
+}
+console.log(array(7,3))
+//2)
+const words = 'A1B2C3D4'
+    otp=' ';
+    for(i=0;i<9;i++){
+        otp+=words[Math.floor(Math.random()* words.length)];
+    }
+console.log(otp)
+06/11/2024
+for (let i = 0; i < 5; i++) {
+     line = '';
+    for (let j = 0; j < 5; j++) {
+        if (j === 0 || j === 4 || i === j) {
+            line += '*';
+        } else {
+            line += ' ';
+        }
+    }
+    console.log(line);
+}
+
+for (let i = 0; i < 5; i++) {
+    let line = ' '.repeat(8 - i * 2);
+    for (let j = 0; j <= i; j++) {
+        if (j === 0 || j === i || i === 4) {
+            line += '*';
+        } else {
+            line += ' ';
+        }
+        if (j < i) {
+            line += ' ';
+        }
+    }
+    console.log(line);
+}
+
+for (let i = 5; i > 0; i--) {
+    let line = '';
+    for (let j = 0; j < 5; j++) {
+        if (j < i) {
+            line += '*';
+        } else {
+            line += ' ';
+        }
+    }
+    console.log(line);
+}
+
+for (let i = 1; i <= 5; i++) {
+    console.log(' '.repeat(6 - i) + Array.from({ length: i }, (_, index) => index + 1).join(' '));
+}
+for (let i = 4; i >= 1; i--) {
+    console.log(' '.repeat(6 - i) + Array.from({ length: i }, (_, index) => i - index).join(' '));
+}
+//Task5
+const alphabet = 'a b c d e';
+const rows = alphabet.split(' ');
+
+// Top half
+for (let i = 0; i < rows.length; i++) {
+    console.log(' '.repeat(i) + rows.slice(0, rows.length - i).join(' '));
+}
+
+// Bottom half
+for (let i = 1; i < rows.length; i++) {
+    console.log(' '.repeat(rows.length - 1 - i) + rows.slice(0, i + 1).join(' '));
+}
+2)(*)
+n = 5; 
+for (i = 0; i < n; i++) {
+     str = '';
+    for ( j = 0; j < n - i - 1; j++) {
+        str += ' ';
+    }
+    for ( j = 0; j < 2 * i + 1; j++) {
+        if (j === 0 || j === 2 * i) {
+            str += String.fromCharCode(65 + i); 
+        } else {
+            str += ' ';
+        }
+    }
+    console.log(line);
+}
+for ( i = n - 2; i >= 0; i--) {
+     line = '';
+    for ( j = 0; j < n - i - 1; j++) {
+        line += ' ';
+    }
+    for ( j = 0; j < 2 * i + 1; j++) {
+        if (j === 0 || j === 2 * i) {
+            line += String.fromCharCode(65 + i);
+        } else {
+            line += ' ';
+        }
+    }
+    console.log(line);
+}
+//M pattern
+let num = 5;
+
+for (let i = 1; i <= num; i++) {
+    let s = "";
+
+    for (let j = 1; j <= num; j++) {
+        if (j === 1 || j === num || (i === j && i <= Math.ceil(num / 2)) || (i + j === num + 1 && i <= Math.ceil(num / 2))) {
+            s += "*";
+        } else {
+            s += " ";
+        }
+    }
+
+    console.log(s);
+}
+(*)
+let n = 5;
+
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    let num = 1;
+
+    for (let j = 1; j <= n - i; j++) {
+        s += " ";
+    }
+
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        if (k === 1 || k === 2 * i - 1) {
+            s += num;
+        } else {
+            s += " ";
+        }
+    }
+
+    console.log(s);
+}
+
+for (let i = n - 1; i >= 1; i--) {
+    let s = "";
+    let num = 1;
+
+    for (let j = 1; j <= n - i; j++) {
+        s += " ";
+    }
+
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        if (k === 1 || k === 2 * i - 1) {
+            s += num;
+        } else {
+            s += " ";
+        }
+    }
+
+    console.log(s);
+}
+07-11-2024(*)
+num =5
+for(i=1;i<=2*num-1;i++){
+    s=""
+    spaces=i<=num?num-i:i-num
+    cols=i<num?i:2*num-i
+    for(sp=0;sp<spaces;sp++){
+        s=s+""
+    }
+    for(j=1;j<=cols;j++){
+        s=s+j+" "
+    }
+    console.log(s)
+}
+(*)
+num =5
+for(i=1;i<=2*num-1;i++){
+    s=""
+    spaces=i<=num?num-i:i-num
+    cols=i<num?i:2*num-i
+    for(sp=0;sp<spaces;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=cols;j++){
+        s=s+j+" "
+    }
+    console.log(s)
+}
+(*)
+num =5
+for(i=1;i<=2*num-1;i++){
+    s=""
+    spaces=i<=num?num-i:i-num
+    cols=i<num?i:2*num-i
+    for(sp=0;sp<spaces;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=cols;j++){
+        if(j==1||j==cols){
+            s=s+j+" "
+        }else{
+            s+=" "+" "
+        }
+    }
+    console.log(s)
+}
+output:
+node /tmp/dJbb8eFAqj.js
+ * * * * * 
+  * * * * 
+   * * * 
+    * * 
+     * 
+    * * 
+   * * * 
+  * * * * 
+ * * * * * 
+(*)
+num =5
+for(i=1;i<=2*num-1;i++){
+    s=""
+    spaces=i<=num?num-i:i-num
+    cols=i<num?i:2*num-i
+    for(sp=0;sp<spaces;sp++){
+         s += " "
+    }
+    for(j=1;j<=cols;j++){
+        if(j==1||j==cols){
+            s=s+1+" "
+        }else{
+            s+="  "
+        }
+    }
+    console.log(s)
+}
+(*)
+num=5
+for(i=1;i<=num*2-1;i++){
+    s=" "
+    spaces= i<=num?i-1:2*num-i-1
+    cols= i<=num?num-i+1:i-num+1
+    for(sp=0;sp<spaces;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=cols;j++){
+        if(j==1||j==cols||i==1||i==2*num-1){
+            s=s+"*"+" "
+        }else{
+            s+="*"+" "
+        }
+    }
+   console.log(s)
+}
+output:
+node /tmp/TBcmFxh729.js
+     1 
+    1 2 
+   1 2 3 
+  1 2 3 4 
+ 1 2 3 4 5 
+  4 3 2 1 
+   3 2 1 
+    2 1 
+     1 
+(*)
+num=5
+for(i=1;i<=num;i++){
+    s=""
+    //for spaces
+    for(sp=0;sp<num-i;sp++){
+        s=s+" "+" "
+    }
+    //first half of columns
+    for(j=1;j<=i;j++){
+        s=s+j+" "
+    }
+    //second half of columns
+    for(k=i-1;k>=1;k--){
+        s=s+k+" "
+    }
+    console.log(s)
+}
+Output:
+node /tmp/hIpkBaqzwo.js
+        1 
+      1 2 1 
+    1 2 3 2 1 
+  1 2 3 4 3 2 1 
+1 2 3 4 5 4 3 2 1 
+(*)
+num =5
+for(i=1;i<=num;i++){
+    s=""
+    for(j=1;j<=num;j++){
+        if(i==num||j==num||i+j>=num+1){
+            s=s+"*"+" "
+        }else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+}
+output:
+node /tmp/nOVSZt1baa.js
+        * 
+      * * 
+    * * * 
+  * * * * 
+* * * * * 
+08-11-2024
+(*)num=4
+prime=2
+for(i=1;i<=num;i++){
+    c=1
+    s=""
+    while(c<=i){
+        fact=0
+        for(j=2;j<prime;j++){
+            if(prime%j==0){
+                fact++
+                break;
+                }
+        }
+        if(fact==0){
+            //if(prime<10){
+            //    s=s
+            s=s+prime+" "
+            c++
+            }
+            prime++
+        }
+        console.log(s)
+    }
+Output:node 
+2 
+3 5 
+7 11 13 
+17 19 23 29 
+(*)num=5
+for(i=1;i<=num;i++){
+    code=97
+    s=""
+    for(sp=0;sp<num-i;sp++){
+        s=s+" "+" "
+    }
+    for(j=1;j<=i;j++){
+        s=s+String.fromCharCode(code)+" "
+        code++
+    }
+    code=code-2
+    for(k=1;k<=i-1;k++){
+        s=s+String.fromCharCode(code)+" "
+        code--
+    }
+    console.log(s)
+}
+output:
+        a 
+      a b a 
+    a b c b a 
+  a b c d c b a 
+a b c d e d c b a
+09-11-2024
+(*)let arr=[[1,2,3],
+         [4,5,6],
+         [7,8,9]]
+let transposed=[]
+for(i=0;i<arr.length;i++){
+    row=[]
+    for(j=0;j<arr[i].length;j++){
+        row.push(arr[j][i])//arr[0][0] arr[1][0]arr[2][0]
+    }
+    transposed.push(row)
+}
+console.log(transposed)
+output:
+[ [ 1, 4, 7 ], [ 2, 5, 8 ], [ 3, 6, 9 ] ]
+(*)
+let arr = [
+  {name: "vinay", salary: 5000},
+  {name: "suresh", salary: 3000},
+  {name: "ravi", salary: 6000}
+];
+
+let avg = 0;
+for (let i of arr) {
+    avg += i.salary;
+}
+avg = avg / arr.length;
+for (let i of arr) {
+    if (i.salary > avg) {
+        console.log(i.name);
+    }
+}
+Output:
+vinay
+ravi
+//11-11-2024
+(*)let students = [
+    {
+        name: "Amar",
+        marks: { eng: 85, math: 90 }
+    },
+    {
+        name: "Bharat",
+        marks: { eng: 92, math: 88 }
+    },
+    {
+        name: "Chirag",
+        marks: { eng: 78, math: 85 }
+    }
+];
+
+let student_name = "";
+let max_marks = -Infinity;
+
+for (let i of students) {
+    if (i.marks.eng > max_marks) {
+        student_name = i.name;
+        max_marks = i.marks.eng;
+    }
+}
+
+console.log(student_name);
+(*)
+let employees=[
+    {name:"Vicky",salary:50000},
+    {name:"murali",salary:80000},
+    {name:"karthik",salary:150000},
+    ];
+for(i=0; i< employees.length;i++){
+    for(j= i + 1; j<employees.length;j++){
+        if(employees[i].name[0] > employees[j].name[0]){
+            temp = employees[i];
+            employees[i]=employees[j];
+            employees[j]=temp;
+        }
+    }
+}
+console.log(employees)
+(*)
+function removeDuplicatesAndSort(arr) {
+    // Step 1: Remove duplicates without using any predefined function
+    let uniqueArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let isDuplicate = false;
+        for (let j = 0; j < uniqueArr.length; j++) {
+            if (arr[i] === uniqueArr[j]) {
+                isDuplicate = true;
+                break;  
+            }
+        }
+        if (!isDuplicate) {
+            uniqueArr.push(arr[i]);
+        }
+    }
+    for (let i = 0; i < uniqueArr.length; i++) {
+        for (let j = 0; j < uniqueArr.length - i - 1; j++) {
+            if (uniqueArr[j] < uniqueArr[j + 1]) {
+                // Swap elements if they're in the wrong order (ascending order2)
+                let temp = uniqueArr[j];
+                uniqueArr[j] = uniqueArr[j + 1];
+                uniqueArr[j + 1] = temp;
+            }
+        }
+    }
+    return uniqueArr;
+}
+//12/11/2024
+(*)let inputArr = [5, 3, 5, 2, 1, 1, 7, 3, 5, 6];
+let result = removeDuplicatesAndSort(inputArr);
+console.log(result); // Output: [7, 6, 5, 3, 2, 1]
+12-11-24
+let time=[{t:"12:01"},{t:"11:30"},{t:"9:15"},{t:"19:00"}]
+for(i of time){
+    if(i.t.slice(-2)){
+        i.remaining_time="0 min"
+    }else{
+      i.remaining_time=60-i.t.slice(-2)+"min"
+    }
+}
+console.log(time)
+output[
+  { t: '12:01', remaining_time: '0 min' },
+  { t: '11:30', remaining_time: '0 min' },
+  { t: '9:15', remaining_time: '0 min' },
+  { t: '19:00', remaining_time: '0 min' }
+]
+(*)
+let sentence = " Javascript(JS) is a object-oriented programming language which adhere to ECMA Script Standards!";
+let words = sentence.split(" ");
+let max = 0;
+let word = "";
+for (i of words){
+  len = 0;
+  for (j of i){
+    if(j !== "!"){
+      len++;
+    }
+  }
+  if(len>max){
+    word = i;
+    max = len;
+  }
+}
+console.log(word)
+output:object-oriented
+(*)let sentence="Javascript(JS) is a object-oriented programming language"
+res=" "
+len=4
+let words=sentence.split(" ")
+for( i of words){
+  cur=i.split("")
+  while(cur.length<len){
+    cur.push("_")
+    if(cur.length<len){
+      cur.unshift("_")
+    }
+  }
+  cur=cur.join("")
+  res=res+cur+" "
+}
+console.log(res)
+13-11-2024
+(*)let time=[{t:"12:01"},{t:"11:30"},{t:"9:15"},{t:"00:02"},{t:"11:30"}]
+for(i of time){
+    cur=i.t.split(":")
+    if(cur[0]<12){
+        i.t=i.t+" AM"
+    }
+    if(cur[0]=="12"){
+        i.t=i.t+" PM"
+    }
+    if(cur[0]=="00"){
+        i.t="12"+":"+cur[1]+" AM"
+    }
+    if(cur[0]>12){
+        i.t=cur[0]-12+":"+cur[1]+" PM"
+    }
+}
+console.log(time)
+Output:[
+  { t: '12:01 PM' },
+  { t: '11:30 AM' },
+  { t: '9:15 AM' },
+  { t: '12:02 AM' },
+  { t: '11:30 AM' }
+]
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task1
+    var isArmstrong = (num) => {
+    var strNum = num.toString();
+    var length = strNum.length;
+    var sum = strNum.split('').reduce((acc, digit) => acc + Math.pow(Number(digit), length), 0);
+    return sum === num;
+};
+var number = 153;
+console.log(number + " is an Armstrong number: " + isArmstrong(number));
+//Task2
+function lcm(a, b) {
+    var max = Math.max(a, b);
+    while (true) {
+        if (max % a === 0 && max % b === 0) {
+            return max;
+        }
+        max++;
+    }
+}
+var num1 = 12;
+var num2 = 15;
+console.log("LCM of " + num1 + " and " + num2 + " is: " + lcm(num1, num2));
+//Task3
+function numberLength(num) {
+    return num.toString().length;
+}
+var num = 1234;
+console.log("Length of " + num + " is: " + numberLength(num));
+//Task4
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (var i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+var numberToCheck = 1234;
+console.log(numberToCheck + " is prime: " + isPrime(numberToCheck));
+//Task5
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (var i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+var numberToCheck = 154;
+console.log(numberToCheck + " is prime: " + isPrime(numberToCheck));
+    </script>
+</body>
+</html>

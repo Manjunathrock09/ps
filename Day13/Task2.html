@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Bright programme";
+
+let upperCount = 0;
+let lowerCount = 0;
+
+for (let char of str) {
+    if (char >= 'A' && char <= 'Z') {
+        upperCount++;
+    } else if (char >= 'a' && char <= 'z') {
+        lowerCount++;
+    }
+}
+console.log(`Uppercase: ${upperCount}, Lowercase: ${lowerCount}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "Bright programme";
+
+let vowelCount = 0;
+let consonantCount = 0;
+let lowerStr = str.toLowerCase();
+
+for (let char of lowerStr) {
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+        vowelCount++;
+    } else if (char >= 'a' && char <= 'z') {
+        consonantCount++;
+    }
+}
+console.log(`Vowels: ${vowelCount}, Consonants: ${consonantCount}`);
+    </script>
+</body>
+</html>

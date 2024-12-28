@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task1
+rows=5
+count=25
+for(i=rows;i>0;i--){
+    s="";
+    for(j=rows;j>0;j--){
+        if(count<10){
+            s=s+"0"+count+' '
+            count--
+        }else{
+            s=s+count+" "
+            count--
+        }
+    }
+    console.log(s)
+}
+//Task2
+num = 15
+count = 1;
+for (let i = 1; count <= num; i++) { 
+    let l = ''; 
+    for (let j = 1; j <= i && count <=num; j++) {
+        l += (count < 10 ? '0' : '') + count + ' ';  
+        count++; 
+    }
+    console.log(l); 
+}
+
+    </script>
+</body>
+</html>

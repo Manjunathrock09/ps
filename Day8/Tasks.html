@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //Task1
+var array = [3, 5, 1, 8, 2, 3, 1];
+var maxValue = array[0];
+for (var i = 1; i < array.length; i++) {
+    if (array[i] > maxValue) {
+        maxValue = array[i];
+    }
+}
+console.log("Maximum value in the array: " + maxValue);
+// Task2
+var minValue = array[0];
+for (var i = 1; i < array.length; i++) {
+    if (array[i] < minValue) {
+        minValue = array[i];
+    }
+}
+var sum = maxValue + minValue;
+console.log("Sum of maximum and minimum values: " + sum);
+// Task3
+var duplicates = [];
+var seen = {};
+for (var i = 0; i < array.length; i++) {
+    if (seen[array[i]]) {
+        if (!duplicates.includes(array[i])) {
+            duplicates.push(array[i]);
+        }
+    } else {
+        seen[array[i]] = true;
+    }
+}
+console.log("Duplicate values in the array: " + duplicates); 
+    </script>
+</body>
+</html>

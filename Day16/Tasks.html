@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task1
+num = 5;
+for (i = 1; i <= num; i++) {
+     s = "";
+     code = 97;
+    for ( k = num; k > i; k--) {
+        s += " ";
+    }
+    
+    for ( j = 1; j <= i; j++) {
+        s += String.fromCharCode(code) + " ";
+        code++;
+    }
+    console.log(s);
+}
+//Task2
+num = 5;
+for (i = 1; i <= num; i++) {
+     s = "";
+     code = 97;
+    for ( k = num; k > i; k--) {
+        s += " ";
+    }
+    
+    for ( j = 1; j <= i; j++) {
+        s += String.fromCharCode(code) + " ";
+        code++;
+    }
+    console.log(s);
+}
+//Task3
+
+let rows = 5; 
+for (let i = rows; i > 0; i--) {
+    l = ''; 
+    for (let j = i; j > 0; j--) {
+        l += j + ' '; 
+    }
+    for (let k = 0; k < rows - i; k++) {
+        l += '  '; 
+    }
+    console.log(l); 
+}
+
+    </script>
+</body>
+</html>
